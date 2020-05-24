@@ -43,6 +43,7 @@ public class CargoShip extends Thread {
             channelSemaphore.acquire();
 
             // Корабль движется по каналу
+            System.out.println(String.format("Ship %d entered channel", shipId));
             sleep(channelPassTimeMillis);
         } catch (InterruptedException ignored) {
         } finally {

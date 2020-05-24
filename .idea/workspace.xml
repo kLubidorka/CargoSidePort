@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee036cae-f6b6-45b9-b6b8-28128be6cdd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CargoSidePortTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CargoShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CargoShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CargoShipGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CargoShipGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CargoSidePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CargoSidePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CargoSidePort$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CargoSidePort$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CargoSidePort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CargoSidePort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,12 +54,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CargoSidePortTest.manyShipsTest">
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test" />
       <module name="Concurrency" />
@@ -63,8 +77,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CargoSidePortTest.easyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Concurrency" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CargoSidePortTest" />
+      <option name="METHOD_NAME" value="easyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CargoSidePortTest.manyShipsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Concurrency" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CargoSidePortTest" />
+      <option name="METHOD_NAME" value="manyShipsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CargoSidePortTest.manyShipsTest" />
+        <item itemvalue="JUnit.CargoSidePortTest.easyTest" />
         <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
@@ -92,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590261075009</updated>
       <workItem from="1590261076612" duration="10087000" />
-      <workItem from="1590319530327" duration="20786000" />
+      <workItem from="1590319530327" duration="23266000" />
     </task>
     <servers />
   </component>
@@ -108,25 +144,56 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1590324636371" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1590345410833">
+    <state width="1398" height="38" key="GridCell.Tab.0.bottom" timestamp="1590348579839">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590345410833" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1590345410832">
+    <state width="1398" height="38" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590348579839" />
+    <state width="1398" height="38" key="GridCell.Tab.0.center" timestamp="1590348579838">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1590345410832" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1590345410831">
+    <state width="1398" height="38" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1590348579838" />
+    <state width="1398" height="38" key="GridCell.Tab.0.left" timestamp="1590348579838">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1590345410831" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1590345410832">
+    <state width="1398" height="38" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1590348579838" />
+    <state width="1398" height="38" key="GridCell.Tab.0.right" timestamp="1590348579839">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1590345410832" />
+    <state width="1398" height="38" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1590348579839" />
+    <state width="1398" height="72" key="GridCell.Tab.1.bottom" timestamp="1590347784140">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="72" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590347784140" />
+    <state width="1398" height="72" key="GridCell.Tab.1.center" timestamp="1590347784139">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="72" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1590347784139" />
+    <state width="1398" height="72" key="GridCell.Tab.1.left" timestamp="1590347784138">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="72" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1590347784138" />
+    <state width="1398" height="72" key="GridCell.Tab.1.right" timestamp="1590347784139">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="72" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1590347784139" />
+    <state x="499" y="184" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590346121477">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="499" y="184" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1440.900@0.0.1440.900" timestamp="1590346121477" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1590336716515">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1590336716515" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CargoSidePort.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -29,7 +29,7 @@ public class CargoSidePort {
 
         assert shipsCapacities.length == shipsResources.length;
         assert resourceNames.length == resourcesLoadTime.length;
-        
+
         RESOURCES_NUM = resourceNames.length;
         CHANNEL_PASS_TIME = channelPassTimeMillis;
 
@@ -49,7 +49,6 @@ public class CargoSidePort {
         landingStageSemaphores = secondSemaphoreGroup;
 
         // Port infrastructure
-        cargoShipGenerator = new CargoShipGenerator(shipsCapacities, shipsResources, this);
         resources = new Resources(RESOURCES_NUM, resourceNames, resourcesLoadTime);
 
         PortTerminal[] terminalsInPort = new PortTerminal[RESOURCES_NUM];
@@ -59,11 +58,20 @@ public class CargoSidePort {
         terminals = terminalsInPort;
         shipsResource = shipsResources;
         shipsCapacity = shipsCapacities;
+        cargoShipGenerator = new CargoShipGenerator(shipsCapacities, shipsResources, this);
         priorities = new int[RESOURCES_NUM][2];
+        for (int i = 0; i < RESOURCES_NUM; i++){
+            priorities[i][0] = i;
+        }
     }
 
-    public int[] releaseShips(int maxDelayMillis) throws InterruptedException {
-        return cargoShipGenerator.releaseShips(maxDelayMillis);
+    public int[] releaseShips(int maxDelayMillis) {
+        try {
+            return cargoShipGenerator.releaseShips(maxDelayMillis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public int getChannelPassTime(){
