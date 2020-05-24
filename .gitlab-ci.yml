@@ -2,6 +2,7 @@ image: maven
 
 stages:
     - build
+    - test
 
 build:
     stage: build
@@ -9,3 +10,8 @@ build:
         - mvn install
     tags: [docker-atp]
 
+test:
+    stage: test
+    script:
+    - mvn test
+    tags: [docker-atp]
