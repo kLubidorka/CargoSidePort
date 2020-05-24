@@ -38,7 +38,7 @@ class CargoSidePortTest {
         }
 
         String[] resourceNames = new String[]{"food", "Dynamite", "XXX", "hidden", "wood"};
-        int[] resourcesLoadTime = new int[]{10, 30, 20, 10, 11};
+        int[] resourcesLoadTime = new int[]{10, 5, 12, 10, 11};
 
         int channelCapacity = 10;
         int channelPassTimeMillis = 30;
@@ -55,7 +55,7 @@ class CargoSidePortTest {
                 channelCapacity,
                 channelPassTimeMillis);
 
-        int[] actual = port.releaseShips(500);
+        int[] actual = port.releaseShips(200);
         assertNotNull(actual);
         assertArrayEquals(actual, expected);
     }
