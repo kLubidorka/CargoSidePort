@@ -1,5 +1,4 @@
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class CargoShip extends Thread {
     private final int capacity;
@@ -7,7 +6,6 @@ public class CargoShip extends Thread {
     private final Semaphore groupSemaphore;
     private final Semaphore channelSemaphore;
     private final Semaphore landingStageSemaphore;
-    //private final AtomicBoolean permission;
     private final CargoSidePort port;
     private final PortTerminal terminal;
     private final int channelPassTimeMillis;
@@ -17,7 +15,6 @@ public class CargoShip extends Thread {
                      Semaphore inputGroupSemaphore,
                      Semaphore inputChannelSemaphore,
                      Semaphore inputLandingStageSemaphore,
-                     AtomicBoolean inputPermission,
                      CargoSidePort inputPort,
                      PortTerminal inputTerminal) {
         assert inputCapacity > 0;
@@ -31,7 +28,6 @@ public class CargoShip extends Thread {
 
         port = inputPort;
         terminal = inputTerminal;
-        //permission = inputPermission;
         channelPassTimeMillis = port.getChannelPassTime();
     }
 
@@ -40,11 +36,6 @@ public class CargoShip extends Thread {
         try {
             // Корабль встает в очередь к каналу
             groupSemaphore.acquire();
-
-//            // Корабль запрашивает разрешение на доступ в канал
-//            while (!permission.compareAndSet(true, false)) {
-//                permission.wait();
-//            }
         } catch (InterruptedException ignored) { }
 
         try {
@@ -55,7 +46,7 @@ public class CargoShip extends Thread {
             sleep(channelPassTimeMillis);
         } catch (InterruptedException ignored) {
         } finally {
-            port.updatePriorities();
+            port.updatePriorities(shipId, false);
             channelSemaphore.release();
         }
 
@@ -70,7 +61,7 @@ public class CargoShip extends Thread {
             System.out.println(String.format("Ship %d loaded and ready", shipId));
         } catch (InterruptedException ignored) {
         } finally {
-            port.updatePriorities();
+            port.updatePriorities(shipId, true);
             landingStageSemaphore.release();
         }
     }

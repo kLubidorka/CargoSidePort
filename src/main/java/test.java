@@ -1,16 +1,21 @@
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class test {
     public static void main(String[] args) {
-        Map priorities = new TreeMap<>();
+        int[][] arr = new int[10][2];
         for (int i = 0; i < 10; i++){
-            priorities.put(i * (i % 2 == 0 ? -1 : 1), i);
+            arr[i] = new int[]{i, i * (i % 2 == 0 ? 1 : -1)};
         }
-        for (Map.Entry entry : priorities){
-            System.out.println(entry);
-        }
-        int newPriority = (int) priorities.get(3) * 100;
-        priorities.replace(3, newPriority);
+        System.out.println(Arrays.deepToString(arr));
+
+        Arrays.sort(arr, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] first, int[] second) {
+                return second[1] - first[1];
+            }
+        });
+
+        System.out.println(Arrays.deepToString(arr));
     }
 }

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee036cae-f6b6-45b9-b6b8-28128be6cdd8" name="Default Changelist" comment="" />
+    <list default="true" id="ee036cae-f6b6-45b9-b6b8-28128be6cdd8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CargoShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CargoShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CargoShipGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CargoShipGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CargoSidePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CargoSidePort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +21,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -28,6 +39,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1cJyd3Au8Ov0t8R3FIDnzjFb9ow" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -35,12 +47,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="Concurrency" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -65,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590261075009</updated>
       <workItem from="1590261076612" duration="10087000" />
-      <workItem from="1590319530327" duration="17690000" />
+      <workItem from="1590319530327" duration="20786000" />
     </task>
     <servers />
   </component>
@@ -81,23 +108,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1590324636371" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1590345410833">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590345410833" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1590345410832">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1590345410832" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1590345410831">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1590345410831" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1590345410832">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1590345410832" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1590336716515">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1590336716515" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/CargoSidePort.java</url>
-          <line>105</line>
-          <properties class="CargoSidePort" method="updatePriorities">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

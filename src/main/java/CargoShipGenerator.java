@@ -1,12 +1,10 @@
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class CargoShipGenerator {
     private final int SHIP_NUM;
     private final Semaphore[] groupSemaphores;
     private final Semaphore channelSemaphore;
     private final Semaphore[] landingStageSemaphores;
-    private final AtomicBoolean[] permissions;
     private final int[] shipCapacities;
     private final int[] shipResourceIds;
     private final CargoSidePort port;
@@ -25,7 +23,6 @@ public class CargoShipGenerator {
         groupSemaphores = port.getGroupSemaphores();
         channelSemaphore = port.getChannelSemaphore();
         landingStageSemaphores = port.getLandingStageSemaphores();
-        permissions = port.getPermissions();
         terminals = port.getTerminals();
     }
 
@@ -45,7 +42,6 @@ public class CargoShipGenerator {
                     groupSemaphores[resourceId],
                     channelSemaphore,
                     landingStageSemaphores[resourceId],
-                    permissions[resourceId],
                     port, terminals[resourceId]);
         }
 
