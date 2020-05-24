@@ -1,4 +1,5 @@
 /target/*
 Concurrency.iml
 *.DS_Store
+.gitignore
 

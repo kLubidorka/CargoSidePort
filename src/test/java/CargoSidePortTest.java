@@ -1,3 +1,5 @@
+import java.util.Random;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -56,6 +58,48 @@ class CargoSidePortTest {
                 channelPassTimeMillis);
 
         int[] actual = port.releaseShips(200);
+        assertNotNull(actual);
+        assertArrayEquals(actual, expected);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void originalTaskTest(){
+        int shipsNum = 10;
+        int resourcesNum = 3;
+
+        int[] shipsCapacities = new int[shipsNum];
+        int[] shipsResources = new int[shipsNum];
+
+        int[] possibleCapacities = new int[]{10, 50, 100};
+
+        Random rand = new Random();
+        Random rand1 = new Random();
+        for (int i = 0; i < shipsNum; i++){
+            int randomIndex = rand.nextInt(possibleCapacities.length - 1);
+            int randomIndex1 = rand1.nextInt(resourcesNum - 1);
+            shipsCapacities[i] = possibleCapacities[randomIndex];
+            shipsResources[i] = randomIndex1;
+        }
+
+        String[] resourceNames = new String[]{"Хлеб", "Бананы", "Одежда"};
+        int[] resourcesLoadTime = new int[]{100, 100, 100};
+
+        int channelCapacity = 5;
+        int channelPassTimeMillis = 1000;
+        int[] expected = new int[resourcesNum];
+
+        for(int i = 0; i < shipsNum; i++){
+            expected[shipsResources[i]] += shipsCapacities[i];
+        }
+
+        CargoSidePort port = new CargoSidePort(shipsCapacities,
+                shipsResources,
+                resourceNames,
+                resourcesLoadTime,
+                channelCapacity,
+                channelPassTimeMillis);
+
+        int[] actual = port.releaseShips(100);
         assertNotNull(actual);
         assertArrayEquals(actual, expected);
     }
